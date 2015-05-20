@@ -89,3 +89,22 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+.radio{
+    position: relative;
+
+    margin-left: 100px;
+    margin-top: -25px;
+}
+.field-indexform-year{
+    float: left;
+}
+.field-indexform-month{
+    float: left;
+}
+.field-indexform-address{
+    position: absolute;
+    width: 363px;
+}
+.btn-primary{
+    margin-top: 100px;
+}

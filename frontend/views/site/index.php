@@ -15,16 +15,30 @@ $this->params['breadcrumbs'][] = $this->title;
            <?php $form = ActiveForm::begin();?>
 
                 <?=$form->field($model,'gender')->radioList(['1'=>'男','0'=>'女'],['class'=>'genderlist'])?>
-                <?=$form->field($model,'birthyear')->dropDownList(["prompt"=>"请选择"],["style"=>"width:120px"])?>
-                <?=$form->field($model,'address')->dropDownList(["prompt"=>"请选择"],["style"=>"width:120px"])?>
+                <?=$form->field($model,'year')->dropDownList(["prompt"=>"请选择"],["id"=>"year","style"=>"width:120px"])?>
+                <?=$form->field($model,'month')->dropDownList(["prompt"=>"请选择"],["id"=>"month","style"=>"width:120px"])?>
+                <?=$form->field($model,'day')->dropDownList(["prompt"=>"请选择"],["id"=>"day","style"=>"width:120px"])?>
+                <?=$form->field($model,'address')?>
 
                 <?=Html::submitButton('注册',["class"=>"btn btn-primary","name"=>"submit-button"])?>
             <?php $form = ActiveForm::end();?>
-
-
+           <a class="btn btn-primary" href="index.php?r=site/login" style="margin-left:330px; margin-top: -62px; ">登陆<a>
+        <img src="http://www.newgxu.cn/html/2011-10/files/jpg1318437446_0.jpg" style="position: absolute;margin-top: -350px;margin-left: 250px;"/>
 
     </div>
 </div>
-<style>
+<script type="text/javascript" src="/advanced/frontend/web/assets/7446e553/js/year_month_day.js"></script>
+<script type="text/javascript">
+    var selYear = window.document.getElementById("year");
+    var selMonth = window.document.getElementById("month");
+    var selDay = window.document.getElementById("day");
 
-</style>
+    // 新建一个DateSelector类的实例，将三个select对象传进去
+    new DateSelector(selYear, selMonth, selDay,'2015','1','1');
+    // 也可以试试下边的代码
+    // var dt = new Date(2004, 1, 29);
+    // new DateSelector(selYear, selMonth ,selDay, dt);
+
+
+</script>
+
