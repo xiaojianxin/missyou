@@ -22,14 +22,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?=Html::submitButton('注册',["class"=>"btn btn-primary","name"=>"submit-button"])?>
             <?php $form = ActiveForm::end();?>
-           <a class="btn btn-primary" href="index.php?r=site/login" style="margin-left:330px; margin-top: -62px; ">登陆<a>
-        <img src="http://www.newgxu.cn/html/2011-10/files/jpg1318437446_0.jpg" style="position: absolute;margin-top: -350px;margin-left: 250px;"/>
+           <a class="btn btn-primary" href="index.php?r=site/login" style="margin-left:330px; margin-top: -57px; ">登陆<a>
+        <img src="/advanced/frontend/web/public/images/default.jpg" style="position: absolute;margin-top: -350px;margin-left: 250px;"/>
 
     </div>
 </div>
 <script type="text/javascript" src="/advanced/frontend/web/assets/7446e553/js/year_month_day.js"></script>
 <script type="text/javascript">
     var selYear = window.document.getElementById("year");
+    alter("11");
     var selMonth = window.document.getElementById("month");
     var selDay = window.document.getElementById("day");
 
