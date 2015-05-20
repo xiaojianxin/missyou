@@ -27,10 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </div>
 </div>
-<script type="text/javascript" src="/advanced/frontend/web/assets/7446e553/js/year_month_day.js"></script>
+<script type="text/javascript" src="/advanced/frontend/web/js/birthday.js"></script>
 <script type="text/javascript">
     var selYear = window.document.getElementById("year");
-    alter("11");
     var selMonth = window.document.getElementById("month");
     var selDay = window.document.getElementById("day");
 
