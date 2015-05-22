@@ -20,9 +20,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?=$form->field($model,'day')->dropDownList(["prompt"=>"请选择"],["id"=>"day","style"=>"width:120px"])?>
                 <?=$form->field($model,'address')?>
 
-                <?=Html::submitButton('注册',["class"=>"btn btn-primary","name"=>"submit-button"])?>
+                <?=Html::submitButton('SignUp',["class"=>"btn btn-primary","name"=>"submit-button"])?>
             <?php $form = ActiveForm::end();?>
-           <a class="btn btn-primary" href="index.php?r=site/login" style="margin-left:330px; margin-top: -57px; ">登陆<a>
+           <a class="btn btn-primary" href="index.php?r=site/login" style="margin-left:330px; margin-top: -62px; ">login<a>
         <img src="/advanced/frontend/web/public/images/default.jpg" style="position: absolute;margin-top: -350px;margin-left: 250px;"/>
 
     </div>

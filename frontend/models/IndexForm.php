@@ -22,6 +22,12 @@ class IndexForm extends Model{
     public function rules()
     {
         return [
+            ['gender', 'required'],
+            ['gender', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This gender has already been taken.'],
+
+            ['address', 'required'],
+            ['address', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This address has already been taken.'],
+
         ];
     }
 }

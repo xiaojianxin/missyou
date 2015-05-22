@@ -73,7 +73,27 @@ class SiteController extends Controller
         }
         $model = new IndexForm();
         if ($model->load(Yii::$app->request->post())) {
-            return $this->goBack();
+
+            $post = Yii::$app->request->post('IndexForm');
+            $year = $post['year'];
+            $month = $post['month'];
+            $day = $post['day'];
+            $gender = $post['gender'];
+            if($gender=="1"){
+                $gender = "男";
+            }else if($gender=="2"){
+                $gender = "女";
+            }
+            $address = $post['address'];
+            $model = new SignupForm();
+            return $this->render('signup', [
+                'model' => $model,
+                'year' => $year,
+                'month' => $month,
+                'day' => $day,
+                'gender' =>$gender,
+                'address' => $address,
+            ]);
         } else {
             return $this->render('index', [
                 'model' => $model,

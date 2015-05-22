@@ -17,6 +17,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <ul class="personalinfo">
+                <li class="information">
+                    <span style="display: inline-block;max-width: 100%;margin-bottom: 5px;font-weight: bold">Gender:<?=$gender ?></span>
+                </li>
+                <li class="information">
+                    <span style="display: inline-block;max-width: 100%;margin-bottom: 5px;font-weight: bold">Address:<?=$address ?></span>
+                </li>
+                <li class="information">
+                    <span style="display: inline-block;max-width: 100%;margin-bottom: 5px;font-weight: bold">Birthday:<?=$year?>年<?=$month?>月<?=$day?>日</span>
+                </li>
+
+            </ul>
+
                 <?= $form->field($model, 'username') ?>
                 <?= $form->field($model, 'email') ?>
                 <?= $form->field($model, 'password')->passwordInput() ?>
